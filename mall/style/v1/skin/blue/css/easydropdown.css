@@ -1,0 +1,67 @@
+/* --- RESET --- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+table { border-spacing: 0; border-collapse: collapse; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+a { text-decoration: none; }
+nav li { list-style-type: none; display: inline-block; }
+/* --- DEMO STYLES --- */
+.metro .carat, .metro .carat:after { content: ''; position: absolute; right: 10px; top: 50%; margin-top: -4px; border: 8px solid transparent; border-top: 8px solid #000; z-index: 2; -webkit-transform-origin: 50% 20%; -moz-transform-origin: 50% 20%; -ms-transform-origin: 50% 20%; transform-origin: 50% 20%; }
+.metro .carat:after { margin-top: -10px; right: -8px; border-top-color: #f8f8f8; }
+.metro:hover .carat:after { border-top-color: #f4f4f4; }
+.metro.focus .carat { border-top-color: #f8f8f8; }
+.metro.focus .carat:after { border-top-color: #0180d1; }
+.metro.open .carat { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+
+
+.details_dropdown, .details_dropdown div, .details_dropdown li, .details_dropdown div::after {
+ -webkit-transition: all 150ms ease-in-out;
+ -moz-transition: all 150ms ease-in-out;
+ -ms-transition: all 150ms ease-in-out;
+ transition: all 150ms ease-in-out;
+}
+ .details_dropdown .selected::after, .details_dropdown.scrollable div::after {
+ -webkit-pointer-events: none;
+ -moz-pointer-events: none;
+ -ms-pointer-events: none;
+ pointer-events: none;
+}
+/* WRAPPER */
+
+.details_dropdown { position: relative; width: 45px; cursor: pointer; padding-left:5px;}
+.details_dropdown.open { z-index: 2; }
+.details_dropdown:hover { box-shadow: 0 0 5px rgba(0, 0, 0, .15); }
+.details_dropdown.focus { box-shadow: 0 0 5px rgba(51, 102, 248, .4); }
+/* CARAT */
+
+.details_dropdown .carat {  position: absolute; right: 5px; top: 40%; background:url(../images/details_6.jpg) no-repeat; width:7px; height:7px; }
+.details_dropdown.open .carat {  background:url(../images/details_6_1.jpg) no-repeat; width:7px; height:7px; }
+.details_dropdown.disabled .carat { border-top-color: #999; }
+/* OLD SELECT (HIDDEN) */
+
+.details_dropdown .old { position: absolute; left: 0; top: 0; height: 0; width: 0; overflow: hidden; }
+.details_dropdown select { position: absolute; left: 0px; top: 0px; }
+.details_dropdown.touch .old { width: 100%; height: 100%; }
+.details_dropdown.touch select { width: 100%; height: 100%; opacity: 0; }
+/* SELECTED FEEDBACK ITEM */ 
+
+.details_dropdown .selected, .details_dropdown li { display: block; font-size: 12px; height:35px; line-height:35px; color: #000; overflow: hidden; padding-left:5px;}
+.details_dropdown.disabled .selected { color: #999; }
+ .details_dropdown .selected::after {
+ content: '';
+ position: absolute;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ width: 60px;
+ border-radius: 0 2px 2px 0;
+}
+/* DROP DOWN WRAPPER */
+
+.details_dropdown div { position: absolute; height: 0; left: -1px; right: -1px; top: 100%; margin-top: -1px; background: #fff; border: 1px solid #ccc; border-top:none; border-radius: 0 0 3px 3px; overflow: hidden; opacity: 0; }
+/* Height is adjusted by JS on open */
+
+.details_dropdown.open div { opacity: 1; z-index: 2; }
+
+/* FADE OVERLAY FOR SCROLLING LISTS */

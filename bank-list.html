@@ -1,0 +1,822 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+
+
+
+
+<meta name ="keywords" content="银行卡商城">
+<title>银行卡商城</title>
+<link href="/mall/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/mall/style/v1/skin/blue/css/details.css" rel="stylesheet" type="text/css" />
+<link href="/mall/style/v1/skin/blue/css/easydropdown.css" rel="stylesheet" type="text/css"/>
+<script src="/mall/scripts/jquery.min.js"></script>
+<script src="/mall/scripts/jquery.easydropdown.js"></script>
+<script type="text/javascript" src="/mall/scripts/jquery1.3.2.js"></script>
+<script type="text/javascript" src="/mall/scripts/jquery.alert.js"></script>
+<script type="text/javascript">
+	var contextPath = '/mall';
+	var applicationContextPath = 'http://mall.cbhb.com.cn/mall';
+	var httpsApplicationContextPath = 'https://mall.cbhb.com.cn/mall';
+</script>
+<script type="text/javascript" src="/mall/scripts/scrolltopcontrol.js"></script>
+
+</head>
+<body>
+<form id="qryPointRange" name="qryPointRange" action="/mall/product/searchRangeList" method="post">
+	<input type="hidden" name="queryVo.pointRange" value="" id="pointRange"/>
+</form>
+
+
+
+<div class="details_1160">
+
+  <div class="details_one">
+    <div class="details_one_1" id="user_title">
+		
+			您好，欢迎您来到银行卡商城！ <a href="https://mall.cbhb.com.cn/mall/member/login.action">[请登录]</a>新用户？<a href="https://mall.cbhb.com.cn/mall/member/register.action"><b>立即注册</b></a>
+		
+    	
+		
+    </div>
+    <div class="details_one_2">
+    	  
+    	<a href="http://mall.cbhb.com.cn/mall/member/order/mallOrderList.action" class="details_one_2_3">我的订单</a>
+    	<span>|</span>
+    	<a href="http://mall.cbhb.com.cn/mall/member/index.action">会员中心</a>
+    	
+    	<span>|</span>
+    	<a href="http://www.cbhb.com.cn/" target="_blank">银行主站</a>	
+    	
+    </div>
+  </div>
+  
+
+  
+  <div class="details_clear"></div>
+  <div class="details_three">
+    <div class="details_three_1">
+        <!-- 
+        <a href="http://mall.cbhb.com.cn"><img src="https://img.leagcard.com/cms/uploadFiles/banklogo/1901_logo.jpg" width="288px" height="70"/></a>
+         -->
+        <a href="http://mall.cbhb.com.cn"><img src="/mall/image/getImg.action?type=logo" width="288px" height="70"/></a>
+    </div>
+    <div class="details_three_2">
+      <div class="details_plan_search"> </div>
+      <div class="details_plan_search_1">
+        <form id="searchForm" method="post" action="http://mall.cbhb.com.cn/mall/product/productSearchList.action" onsubmit="return validateSearch()">
+        <input name="keyword" type="text" autocomplete="off" class="search-keyword" style="color:gray" onkeydown="searchKeyDown(event)" id="search-keyword" value="输入关键词" onfocus="if(this.value==this.defaultValue){this.value='';this.style.color='black';}"
+									onblur="if(this.value==''){this.value=this.defaultValue;this.style.color='gray';}" />
+        </form>
+      </div>
+      <div class="details_three_2_2">
+      	热门搜索：
+      	
+      		<a href="javascript:void(0)" onclick="quickSearch('双立人')">双立人</a>
+      	
+      		<a href="javascript:void(0)" onclick="quickSearch('新秀丽')">新秀丽</a>
+      	
+      		<a href="javascript:void(0)" onclick="quickSearch('松下')">松下</a>
+      	
+      		<a href="javascript:void(0)" onclick="quickSearch('电水壶')">电水壶</a>
+      	
+      		<a href="javascript:void(0)" onclick="quickSearch('电烤箱')">电烤箱</a>
+      	
+      		<a href="javascript:void(0)" onclick="quickSearch('罗莱')">罗莱</a>
+      	
+      		<a href="javascript:void(0)" onclick="quickSearch('自行车')">自行车</a>
+      	
+      </div>
+      <div class="details_clear"></div>
+      <a href="javascript:void(0)" class="details_three_2_4" onclick="productSearch()"></a>
+      <div class="details_clear"></div>
+      <!-- 
+      <ul id="hotwords" class="hotwords" style="display:none">
+        <li><a href='#'>
+          <h1>背景</h1>
+          <span>13776次搜索</span></a></li>
+      </ul>
+      <script language="javascript" type="text/javascript" src="/mall/scripts/searchjs.js"></script>
+       -->
+    </div>
+    
+    <div class="details_clear"></div>
+  </div>
+</div>
+<div class="details_15px"></div>
+<!-- 当栏目大于4个时，将details_nav_k替换为details_nav  details_nav_in_k 替换为details_nav_in-->
+<div class="details_nav_k">
+  <div class="details_nav_in_k">
+    <ul>
+      
+      
+      
+       	 
+      <li><a href="http://mall.cbhb.com.cn/mall/ui/giftIndex.action" id="navigateIndex_1">积分计划<span class="hot"></span></a></li>
+      
+      
+    
+      <!-- 增值服务过渡商品连接开始 -->
+      
+      <!-- 增值服务过渡商品连接结束 -->
+      
+      <!-- 商旅通菜单开始 -->
+      <!-- 当栏目大于4个时，将slt_cd_k替换为slt_cd  slt_xl_k 替换为slt_xl-->
+      
+      <!-- 商旅通菜单结束 -->
+      
+      
+
+    </ul>
+    <div class="details_clear"></div>
+    <div class="details_nav_car">
+      <div></div>
+      <div class="details_car_num">购物车<span id="cookie_product_amount">0</span>件<a href="http://mall.cbhb.com.cn/mall/cart/showCart.action">去结算&gt;</a></div>
+    </div>
+  </div>
+</div>
+
+ 
+
+<div class="details_10px"></div>
+
+<!-- include -->
+
+
+
+
+
+<link href="/mall/style/v1/skin/blue/css/add.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/mall/scripts/jquery-min.js"></script>
+<script type="text/javascript" src="/mall/scripts/usppage.js"></script>
+<script type="text/javascript" src="/mall/scripts/recentlyViewProducts.js"></script>
+
+<div class="shopListWrap">
+   <form id="form" name="form" action="/mall/product/classProductList.action" method="post">
+   <div class="details_plan_1">
+   <!-- <b class="details_plan_fl">请选择积分范围：</b> -->
+   <span class="details_plan_2">
+    
+    <input type="text" autocomplete="off" style="color:gray" class="search-keyword2" id="search-keyword2" value="" readonly="readonly"/>
+    <a href="#" class="details_plan_btn" onclick="submitForm()">搜索</a>
+    <ul id="hotwords2" class="hotwords2" style="display:none">
+      	<li><a href='#'><h1>1-20000</h1></a></li>
+		<li><a href='#'><h1>20001-50000</h1></a></li>
+		<li><a href='#'><h1>50001-100000</h1></a></li>
+		<li><a href='#'><h1>100001-150000</h1></a></li>
+		<li><a href='#'><h1>150001-500000</h1></a></li>
+		<li><a href='#'><h1>500001-1000000</h1></a></li>
+		<li><a href='#'><h1>1000000以上</h1></a></li>
+    </ul>
+    <script type="text/javascript" src="/mall/scripts/searchjs.js"></script>
+    </span></div>
+
+	<!-- 隐藏域 -->
+	<input type="hidden" name="classId" value="1103" id="form_classId"/>
+	<input type="hidden" name="queryVo.pubDateSort" value="" id="pubDateSort"/>
+	<input type="hidden" name="queryVo.creditsOrPriceSort" value="" id="pointSort"/>
+	<input type="hidden" name="queryVo.salesSort" value="" id="salesSort"/>
+	
+  <div class="shopListBox">
+    <div class="leftBar">
+      <div class="leftCatalog" id="leftCatalog">
+        <div class="leftCatalogTitle" id="leftCatalogTitle">
+          <img src="/mall/style/v1/skin/blue/images/shopCatalog.gif"/>
+        </div>
+        <div class="leftCatalogContent" id="leftCatalogContent">
+          
+			<a href="classProductList.action?classId=1103" class="cur" >数码家电</a>
+	  	   
+			<a href="classProductList.action?classId=1104"  >家居日用</a>
+	  	   
+			<a href="classProductList.action?classId=1105"  >时尚精品</a>
+	  	   
+			<a href="classProductList.action?classId=1106"  >运动休闲</a>
+	  	   
+			<a href="classProductList.action?classId=1131"  >儿童母婴</a>
+	  	   
+			<a href="classProductList.action?classId=1133"  >汽车用品</a>
+	  	   
+			<a href="classProductList.action?classId=13300"  >电子礼券</a>
+	  	   
+        </div>
+      </div>
+      <div class="leftBarBox">
+        <div class="leftBoxTitle">数码家电 </div>
+        <div class="leftBarContent">
+            
+				<a href="classProductList.action?classId=1141" class="sonCatalogList">手机通讯</a>
+		  	
+				<a href="classProductList.action?classId=1142" class="sonCatalogList">数码影音</a>
+		  	
+				<a href="classProductList.action?classId=1143" class="sonCatalogList">厨房电器</a>
+		  	
+				<a href="classProductList.action?classId=1144" class="sonCatalogList">电脑外设</a>
+		  	
+				<a href="classProductList.action?classId=1145" class="sonCatalogList">家用电器</a>
+		  	
+        </div>
+      </div>
+      <div class="leftBarBox">
+        <div class="leftBoxTitle">最近浏览过的商品</div>
+        <div class="leftBarContent">
+            <ul class="viewOverList" id="hisViewdProds">
+              
+            </ul>
+        </div>
+      </div> 
+
+    </div>
+
+    <div class="rightBar">
+    <div class="rightBarBox">
+      <div class="rightBarBoxTitle">
+        数码家电
+        
+      </div>
+      
+      <div class="rightBarBoxghtBarContent">
+      	  
+          <ul class="shopUl">
+            
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=29204" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20160401/093842-453196068.jpg"/></a>
+	              <p class="proudct">
+	              	松下 WIFI链接 5L IH电磁加热智能电饭煲 SR-ANM181
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=29204" style="color: red;" title="WIFI智能预约！手机轻松一点即可远程操作煮饭！IH电磁加热">WIFI智能预约！手机轻松一点即可远程操作煮饭！IH电磁加热</a>
+	              </p>
+	              
+	              	<span><b>975,200</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=22412" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20151030/1702471174314021.jpg"/></a>
+	              <p class="proudct">
+	              	飞科 电动剃须刀 FS325
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=22412" style="color: red;" title="电源线式充电 弹出式修剪刀 三头独立浮动">电源线式充电 弹出式修剪刀 三头独立浮动</a>
+	              </p>
+	              
+	              	<span><b>49,450</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=11054" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20150402/1416201031168266.jpg"/></a>
+	              <p class="proudct">
+	              	韩国现代 加湿器   HYJS-6026
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=11054" style="color: red;" title="清除静电，净化空气，健康环保">清除静电，净化空气，健康环保</a>
+	              </p>
+	              
+	              	<span><b>83,950</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=11065" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20150402/105512-418802687.jpg"/></a>
+	              <p class="proudct">
+	              	荣事达 电煎锅 HG160D
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=11065" style="color: red;" title="耐高温不烫手柄，自动恒温功能，安全可靠。">耐高温不烫手柄，自动恒温功能，安全可靠。</a>
+	              </p>
+	              
+	              	<span><b>104,500</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=13973" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20150529/155920-418802687.jpg"/></a>
+	              <p class="proudct">
+	              	苏泊尔 节能不锈钢压力锅 YW20F1
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=13973" style="color: red;" title="健康有保障 节能省时耐用">健康有保障 节能省时耐用</a>
+	              </p>
+	              
+	              	<span><b>135,125</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=14000" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20150529/1420531174314021.jpg"/></a>
+	              <p class="proudct">
+	              	荣事达 电压力锅  YDG40-80B61 4L
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=14000" style="color: red;" title="锁住营养 留住美味">锁住营养 留住美味</a>
+	              </p>
+	              
+	              	<span><b>178,250</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=13997" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20150529/1424431174314021.jpg"/></a>
+	              <p class="proudct">
+	              	迪士尼 动力米奇榨汁机 YZ-568K
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=13997" style="color: red;" title="3合1功能搭配、果汁、豆浆、干磨、碎肉一机轻松实现">3合1功能搭配、果汁、豆浆、干磨、碎肉一机轻松实现</a>
+	              </p>
+	              
+	              	<span><b>177,675</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=13998" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20150603/0853361174314021.jpg"/></a>
+	              <p class="proudct">
+	              	荣事达 电烤箱 RK-10T
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=13998" style="color: red;" title="家庭式设计，简易操作，易清洁。">家庭式设计，简易操作，易清洁。</a>
+	              </p>
+	              
+	              	<span><b>118,450</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=22415" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20151026/18004646728356.jpg"/></a>
+	              <p class="proudct">
+	              	幻响 LED护眼灯 D2
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=22415" style="color: red;" title="可高可低，360°旋转">可高可低，360&deg;旋转</a>
+	              </p>
+	              
+	              	<span><b>40,825</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=304" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20150917/0922251189090357.jpg"/></a>
+	              <p class="proudct">
+	              	松下 重低音立体声耳塞式糖果色线夹耳机 RP-HV41
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=304" style="color: red;" title=""></a>
+	              </p>
+	              
+	              	<span><b>36,500</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=29231" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20160624/113808-453196068.jpg"/></a>
+	              <p class="proudct">
+	              	松下 全自动微电脑变频面包机
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=29231" style="color: red;" title="自动酵母果料投放">自动酵母果料投放</a>
+	              </p>
+	              
+	              	<span><b>1,206,950</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=10253" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20160630/1809031327982368.jpg"/></a>
+	              <p class="proudct">
+	              	松下 健康柔风铂金负离子电吹风 EH-GNE3EN405
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=10253" style="color: red;" title="1600W大功率，50℃恒温护发，有效防止过热伤害头发【感恩回馈 冰凉一夏】成功兑换松下铂金负离子电吹风  即赠送 “达贺 便携美发按摩梳”">1600W大功率，50℃恒温护发，有效防止过热伤害头发【感恩回馈 冰凉一夏】成功兑换松下铂金负离子电吹风  即赠送 &ldquo;达贺 便携美发按摩梳&rdquo;</a>
+	              </p>
+	              
+	              	<span><b>141,000</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=29218" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20160624/134656-453196068.jpg"/></a>
+	              <p class="proudct">
+	              	惠而浦 触屏智能精控 面包机 WBM-JM401M
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=29218" style="color: red;" title=""></a>
+	              </p>
+	              
+	              	<span><b>464,600</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=29214" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20160401/124621-438419732.jpg"/></a>
+	              <p class="proudct">
+	              	松下 快速除皱 一机两用蒸汽挂烫机熨斗 NI-FS400
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=29214" style="color: red;" title="兼具平烫与挂烫功能，轻松熨烫四季衣物">兼具平烫与挂烫功能，轻松熨烫四季衣物</a>
+	              </p>
+	              
+	              	<span><b>241,500</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=29215" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20160331/180530-453196068.jpg"/></a>
+	              <p class="proudct">
+	              	松下 多功能厨房料理棒 搅拌机 MX-SS40
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=29215" style="color: red;" title="果汁/搅拌/切丝/切片/奶昔/打发/绞肉/婴儿辅食  一机搞定">果汁/搅拌/切丝/切片/奶昔/打发/绞肉/婴儿辅食  一机搞定</a>
+	              </p>
+	              
+	              	<span><b>254,150</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=315" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20151021/165812-1674419389.jpg"/></a>
+	              <p class="proudct">
+	              	松下 多功能4段温控电烤箱 远红外加热 可定时 NT-GT1
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=315" style="color: red;" title="上下远红外加热器 双面均匀烧烤，色泽均匀，口味上成">上下远红外加热器 双面均匀烧烤，色泽均匀，口味上成</a>
+	              </p>
+	              
+	              	<span><b>149,500</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=10251" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20151013/1401511174314021.jpg"/></a>
+	              <p class="proudct">
+	              	松下 净水器 TK-CS42-SCH
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=10251" style="color: red;" title=""></a>
+	              </p>
+	              
+	              	<span><b>681,500</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			
+				<li>
+				  <a target="_blank" href="/mall/product/productDetail.action?productId=10250" class="img"><img src="https://img.leagcard.com/cms/online/mall/product/20151013/1409231174314021.jpg"/></a>
+	              <p class="proudct">
+	              	松下 手持除螨吸尘器 MC-WF550PJ81
+	              	&nbsp; <a href="/mall/product/productDetail.action?productId=10250" style="color: red;" title="除螨吸嘴，强效除螨，为您维持卧室洁净，守护家人健康">除螨吸嘴，强效除螨，为您维持卧室洁净，守护家人健康</a>
+	              </p>
+	              
+	              	<span><b>456,500</b><b color="#ccc">积分</b></span>
+	              
+	              
+	               <!-- 是否有做积分补差 -->
+	              
+                  
+	              	<span><b>&nbsp;</b></span>
+	              
+	            </li>
+			                                                          
+          </ul>
+      	</div>
+      	 <div class='pagination' style='height:31px; line-height:31px; margin:10px 0; display:block; clear:both; color:#000000; text-align:center;'><span class='disabled'>上一页</span><a style='border:0px;color:red;'><strong>1</strong></a><span class='disabled'>下一页</span></div><input type="hidden" name="page.currentPage" value="1" id="page.currentPage"/><input type="hidden" name="everyPage" value="20" id="everyPage"/> <br />
+ 
+      </div>
+    </div>
+  </div>
+	</form>
+
+
+
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#leftCatalog").mouseover(function(){
+    $("#leftCatalogContent").slideDown();
+  });
+  $("#leftCatalogContent").click(function(){
+    $("#leftCatalogContent").slideUp();
+  });
+  loadRecentlyViewedProducts(1);
+  loadSort();
+});
+
+function submitForm(){
+	if($("#search-keyword2").val().trim()=='请选择积分范围'){
+		//$("#search-keyword2").val('');
+		alert("请选择积分范围");
+	}else{
+		document.getElementById("form").action = "searchRangeList.action?queryVo.pointRange="+$("#search-keyword2").val();
+		document.getElementById("form").submit();
+	}
+}
+
+function loadSort(){
+	if('' == '' && '' == '' && '' == ''){
+		$("#pubDateSort").val('');
+		$("#sort_pub_date").removeClass().addClass("pub_date_sort");
+		$("#pointSort").val('');
+		$("#sort_point").removeClass().addClass("point_sort");
+		$("#salesSort").val('');
+		$("#sort_sales").removeClass().addClass("sales_sort");
+	}
+	if('' == 'ASC'){
+		$("#sort_pub_date").removeClass().addClass("pub_date_sort_shang");
+		$("#pointSort").val('');
+		$("#sort_point").removeClass().addClass("point_sort");
+		$("#salesSort").val('');
+		$("#sort_sales").removeClass().addClass("sales_sort");
+	}
+	if('' == 'ASC'){
+		$("#sort_point").removeClass().addClass("point_sort_shang");
+		$("#pubDateSort").val('');
+		$("#sort_pub_date").removeClass().addClass("pub_date_sort");
+		$("#salesSort").val('');
+		$("#sort_sales").removeClass().addClass("sales_sort");
+	}else if('' == 'DESC'){
+		$("#sort_point").removeClass().addClass("point_sort_xia");
+		$("#pubDateSort").val('');
+		$("#sort_pub_date").removeClass().addClass("pub_date_sort");
+		$("#salesSort").val('');
+		$("#sort_sales").removeClass().addClass("sales_sort");
+	}
+	if('' == 'DESC'){
+		$("#sort_sales").removeClass().addClass("sales_sort_xia");
+		$("#pubDateSort").val('');
+		$("#sort_pub_date").removeClass().addClass("pub_date_sort");
+		$("#pointSort").val('');
+		$("#sort_point").removeClass().addClass("point_sort");
+	}
+}
+
+function sort(column){
+	if('pub_date'==column){
+		$("#pubDateSort").val("ASC");
+		$("#sort_pub_date").removeClass().addClass("pub_date_sort_shang");
+		$("#pointSort").val('');
+		$("#sort_point").removeClass().addClass("point_sort");
+		$("#salesSort").val('');
+		$("#sort_sales").removeClass().addClass("sales_sort");
+	}else if('point'==column){
+		if('' == $("#pointSort").val() || 'DESC'==$("#pointSort").val()){
+			$("#pointSort").val("ASC");
+			$("#sort_point").removeClass().addClass("point_sort_shang");
+		}else{
+			$("#pointSort").val("DESC");
+			$("#sort_point").removeClass().addClass("point_sort_xia");
+		}
+		$("#pubDateSort").val('');
+		$("#sort_pub_date").removeClass().addClass("pub_date_sort");
+		$("#salesSort").val('');
+		$("#sort_sales").removeClass().addClass("sales_sort");
+	}else if('sales'==column){
+		$("#salesSort").val("DESC");
+		$("#sort_sales").removeClass().addClass("sales_sort_xia");
+		$("#pubDateSort").val('');
+		$("#sort_pub_date").removeClass().addClass("pub_date_sort");
+		$("#pointSort").val('');
+		$("#sort_point").removeClass().addClass("point_sort");
+	}
+	document.getElementById("form").submit();
+}
+</script>
+
+
+
+<div class="details_10px"></div>
+
+<div class="details_explanation">
+  
+  <div class="details_explanation_text"><div class="details_plan_bottom"><h3 class="details_plan_bottom_1">新手上路</h3><ul><li><a href="http://mall.cbhb.com.cn/mall/help/helpInfo.action?help.id=10398">注册商城</a></li><li><a href="http://mall.cbhb.com.cn/mall/help/helpInfo.action?help.id=10380">忘记密码</a></li></ul></div><div class="details_plan_bottom"><h3 class="details_plan_bottom_2">积分规则</h3><ul><li><a href="http://mall.cbhb.com.cn/mall/help/helpInfo.action?help.id=10405">积分规则</a></li></ul></div><div class="details_plan_bottom"><h3 class="details_plan_bottom_3">购物与支付</h3><ul><li><a href="http://mall.cbhb.com.cn/mall/help/helpInfo.action?help.id=10395">购物流程</a></li><li><a href="http://mall.cbhb.com.cn/mall/help/helpInfo.action?help.id=10031">订单查看</a></li></ul></div><div class="details_plan_bottom"><h3 class="details_plan_bottom_6">售后配送</h3><ul><li><a href="http://mall.cbhb.com.cn/mall/help/helpInfo.action?help.id=10050">商品配送</a></li><li><a href="http://mall.cbhb.com.cn/mall/help/helpInfo.action?help.id=10051">商品售后</a></li></ul></div><div class="details_plan_bottom"><h3 class="details_plan_bottom_7">最新活动</h3><ul><li><a href="http://mall.cbhb.com.cn/mall/help/helpInfo.action?help.id=10410">消费满额送</a></li></ul></div><div class="details_clear"></div></div>
+  
+  
+  <div class="details_clear"></div>
+  
+  <div class="details_footer">
+    <p>
+    	<a href="http://mall.cbhb.com.cn/mall/help/tipInfo.action?tip.id=10022">隐私条款</a>|<a href="http://mall.cbhb.com.cn/mall/help/tipInfo.action?tip.id=10023">联系我们</a>|<a href="http://mall.cbhb.com.cn/mall/help/tipInfo.action?tip.id=10021">法律申明</a>
+    </p>
+    
+    
+    <p>©银行卡商城 2015 – 版权所有 沪ICP备11039870号-2</p>
+    <p style=" color:#999999; width:550px; margin:0 auto;">银行卡商城免责声明：本银行卡商城所提供商品或服务信息均由第三方供应商提供，本行仅为相关信息提供链接和支付结算服务，对交易不作任何担保。</p>
+  </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		if('' != ''){
+			$("#navigateIndex_" + '').addClass("details_nav_now2");
+		}
+		getCookieProductAmount();
+		if("1"==0){
+			getTopBonus();
+		}
+	});
+	
+    String.prototype.trim=function(){return this.replace(/(^\s*)|(\s*$)/g, "");}
+　　 String.prototype.ltrim=function(){return this.replace(/(^\s*)/g,"");}
+　　 String.prototype.rtrim=function(){ return this.replace(/(\s*$)/g,"");}
+	
+    function productSearch(){
+		$('#search-keyword').focus();
+		if($('#search-keyword').val() == null || $('#search-keyword').val().trim() == '' || '输入关键词' == $('#search-keyword').val())
+		{
+		   $('#search-keyword').val('');
+		   alert('请输入查询条件！');
+		}
+		else
+		{
+		   $('#searchForm').attr('action',applicationContextPath + '/product/productSearchList.action');
+		   $('#searchForm').submit();
+		}
+    }
+    
+    function quickSearch(keyword){
+    	$('#search-keyword').val(keyword);
+    	productSearch();
+    }
+	
+	//获取购物车中商品的数量    
+    function getCookieProductAmount(){
+    	$.ajax({
+		   type: "POST",
+		   url: "/mall" + "/cart/getCookieProductAmount.action",
+		   data : "",
+		   success: function(msg){
+		   	  $("#cookie_product_amount").html(msg);
+		   }
+		});
+    	
+    }
+    
+	//获取信用卡积分、商城积分、信用卡名称、商城积分名称和用户昵称
+	function getTopBonus(){
+		$.ajax({
+			   type: "POST",
+			   url: "/mall" + "/member/credit/ajaxGetMemberInfo.action",
+			   data : "",
+			   dataType:'json',
+			   success: function(msg){
+				   if("1" == msg[0].status){
+						$("#creditBonusName").html(msg[0].creditBonusName + "积分：<span>"+msg[0].bankBonus+"分</span>");
+						$("#mallBonusName").html(msg[0].ecomBonusName + "：<span>"+msg[0].ecomBonus+"分</span>");
+						$("#changeInfo").html("我能换什么");
+						$("#changeInfo").attr('href','#');
+						$("#pointRange").val('1-'+(parseInt(msg[0].ecomBonus)+parseInt(msg[0].bankBonus)));
+						$("#changeInfo").click(
+						function(){
+							$("#qryPointRange").submit();
+						});
+				   }else{
+						$("#creditBonusName").html(msg[0].creditBonusName + "积分：<span>"+0+"分</span>");
+						$("#mallBonusName").html(msg[0].ecomBonusName + "：<span>"+0+"分</span>");
+				   }
+			   }
+			});
+	}
+	
+	
+    function searchKeyDown(event){
+    	var e = event || window.event || arguments.callee.caller.arguments[0];
+        if(e && e.keyCode==13){ // enter 键
+        	if($('#search-keyword').val() == null || $('#search-keyword').val().trim() == '' || '输入关键词' == $('#search-keyword').val()){
+        		
+        	}else{
+        		productSearch();
+        	}
+        }
+    }
+    
+    function validateSearch(){
+    	if($('#search-keyword').val() == null || $('#search-keyword').val().trim() == '' || '输入关键词' == $('#search-keyword').val()){
+        	return false;
+        }
+        return true;
+    }
+    
+    function initMenu(){
+    	var _speed = 400; // in ms
+    	var _hold = $('.detalis_top_right_4');
+    	var _t = null;
+    	if(_hold.length){
+    		var _list = _hold.children();
+    		_list.each(function(){
+    			var _el = $(this);
+    			var _box = _el.children('.detalis_top_right_5');
+    			var _sub = _box.children();
+    			_box.show().width(_sub.outerWidth()).hide();
+    			_el.mouseenter(function(){
+    			var _this = this;
+    				_t = setTimeout(function(){
+    					$(_this).css('zIndex', 10);
+    					_el.addClass('hover');
+    					if(_box.is(':hidden')){
+    						_box.show();
+    						_sub.css('marginTop', -_sub.outerHeight());
+    					}
+    					_sub.stop().animate({marginTop: 0}, _speed);
+    				},0)
+    			}).mouseleave(function(){
+    				if(_t) clearTimeout(_t);
+    				var _this = $(this);
+    				$(this).css('zIndex', 5);
+    				if(_sub.length){
+    					_sub.stop().animate({marginTop: -_sub.outerHeight()}, _speed, function(){
+    						_box.hide();
+    						_el.removeClass('hover');
+    						_this.css('zIndex', 1);
+    					});
+    				}else{
+    					_el.removeClass('hover');
+    				}
+    			});
+    		});
+    	}
+    }
+</script>
+
